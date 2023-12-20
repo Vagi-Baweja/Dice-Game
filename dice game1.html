@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="icon" href="./dice.avif">
+    <style>
+        h1 {
+            background-color: crimson;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: xx-large;
+            font-weight: bolder;
+            font-style: italic;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 0;
+        }
+
+        .p1 {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            border: 3px solid black;
+            margin: auto;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .p2 {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            border: 3px solid black;
+            margin: auto;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        #b1 {
+            margin: auto;
+            padding: 20px;
+            background-color: chartreuse;
+            border-radius: 12px;
+            align-items: center;
+            border: 3px solid black;
+            width: 200px;
+            font-size: x-large;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .first-button {
+            text-align: center;
+        }
+
+        #b2 {
+            margin: auto;
+            padding: 20px;
+            background-color: chartreuse;
+            border-radius: 12px;
+            align-items: center;
+            border: 3px solid black;
+            width: 200px;
+            font-size: x-large;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .second-button {
+            text-align: center;
+        }
+
+        .mn {
+            display: contents;
+        }
+
+        #vagi1 {
+            opacity: 0;
+        }
+
+        #vagi2 {
+            opacity: 0;
+        }
+
+        p#result1 {
+            border: 3px solid black;
+            padding: 12px;
+            font-size: xx-large;
+        }
+
+        p#result2 {
+            border: 3px solid black;
+            padding: 12px;
+            font-size: xx-large;
+        }
+
+        div#res {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        div#p {
+            font-size: xx-large;
+            margin: auto;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 30px;
+            border: 4px solid black;
+            background-color: lightpink;
+        }
+
+        div#pp {
+            font-size: xx-large;
+            margin: auto;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 30px;
+            border: 4px solid black;
+            background-color: lightpink;
+        }
+
+        #reload {
+            display: none;
+            background-color: crimson;
+            padding: 12px;
+            font-size: xx-large;
+            border: 5px solid black;
+            width: 500px;
+            height: 90px;
+        }
+
+        div#re {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dice Game</h1>
+    <div id="res">
+        <p id="result1"></p>
+        <p id="result2"></p>
+    </div>
+    <div class="p1 mn"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="p1"></div>
+    <div class="first-button">
+        <button id="b1" onclick="ab()">First User</button>
+    </div>
+
+    <div class="p"></div> <br>
+
+
+    <br>
+    <div class="p2 mn"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="p2"></div>
+    <div class="second-button">
+        <button id="b2" onclick="bc()">Second User</button>
+    </div>
+
+    <div id="pp"></div>
+
+    <input type="text" id="vagi1">
+    <input type="text" id="vagi2">
+
+    <div id="re">
+        <button id="reload" onclick="location.reload()">Play Again</button>
+    </div>
+
+
+
+</body>
+<script>
+    var d = 0;
+    var e = 0;
+    var f = 0;
+    var g = 0;
+    var h = prompt("Enter first name");
+    document.getElementById("b1").innerHTML = h;
+    function ab() {
+        if (f == 0) {
+            var t = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("result1").innerHTML = t;
+            g = g + 1;
+            f++;
+            var vagi1 = document.getElementById("vagi1").value;
+            d = Number(vagi1) + Number(t);
+            for (i = 0; i <= d; i++) {
+                if (d <= 44) {
+                    document.getElementsByClassName("p1")[i].style.backgroundColor = "violet";
+                }
+                else {
+                    d = d - t;
+                }
+                if (d == 44) {
+                    document.getElementById("pp").innerHTML = h + "     Win    ";
+                    document.getElementById("b1").disabled = true;
+                    document.getElementById("b2").disabled = true;
+                    document.getElementById("reload").style.display = "block"
+
+                }
+            }
+            document.getElementById("vagi1").value = d;
+
+        }
+    }
+    var k = prompt("Enter Second Name");
+    document.getElementById("b2").innerHTML = k;
+    function bc() {
+        if (g == 1) {
+            var x = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("result2").innerHTML = x;
+            f = f - 1;
+            g--;
+            var vagi2 = document.getElementById("vagi2").value;
+            e = Number(vagi2) + Number(x);
+            for (i = 0; i <= e; i++) {
+                if (e <= 44) {
+                    document.getElementsByClassName("p2")[i].style.backgroundColor = "blue";
+                }
+                else {
+                    e = e - x;
+                }
+                if (e == 44) {
+                    document.getElementById("p").innerHTML = k + "   WIN   ";
+                    document.getElementById("b1").disabled = true;
+                    document.getElementById("b2").disabled = true;
+                    document.getElementById("reload").style.display = "block"
+
+                }
+            }
+            document.getElementById("vagi2").value = e;
+        }
+    }
+
+</script>
+
+</html>
